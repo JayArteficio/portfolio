@@ -65,8 +65,11 @@ by Traversy Media
         </body>
     then make that file in dist/js/main.js
 
+9. control-backtick to open terminal in VS Code. 
+    > npm run sass (to open the site in real-time)
+    and then right click on html and choose open live
 
-
+10. 
 
 
 
