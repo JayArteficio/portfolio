@@ -1,4 +1,4 @@
-// Menu Button
+// Menu Button or Hamburger
 
 .menu-btn {
   position: absolute;
@@ -14,14 +14,21 @@
     margin: 0 0 5px 0;
     background: #fff;
     @include easeOut;
+
+    &:hover {
+      transition: all 0.4s ease-out;
+      transform: scale(1.2);
+      background: $secondary-color;
+    }
   }
 
   //rotate menu lines into X
+
   &.close {
     transform: rotate(180deg);
 
     .btn-line {
-      // line 1 and
+      // line 1
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
@@ -37,13 +44,13 @@
   }
 }
 
-// Menu Overlay
+// Menu Overlay 
 
 .menu {
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: .95;
   visibility: hidden;
 
   &.show {
@@ -62,50 +69,61 @@
     overflow: hidden;
   }
 
+// right side with links 
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    background: darken($primary-color, 10);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
 
     &.show {
       //slide in from top
-      transition-duration: 700ms;
+      transition-duration: 600ms;
       transform: translate3d(0, 0, 0);
     }
   }
 
-  // branding side
+  // branding side ie portrait or left side 
   &-branding {
-    background: $primary-color;
+    // background: $primary-color;
+    background: darken($primary-color, 20);
     transform: translate3d(0, 100%, 0);
     @include easeOut;
+    
 
     &.show {
       //slide in from bottom
-      transition-duration: 700ms;
+      transition-duration: 600ms;
       transform: translate3d(0, 0, 0);
+      // z-index: -1;
     }
 
     .portrait {
       width: 250px;
       height: 250px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      // background-color: red;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 3px $secondary-color;
+      border: solid 4px $secondary-color;
       opacity: 1;
+      background-position: -14px, 50px;
+      background-size: 110%;
+      // z-index: 10;
+  
     }
   }
 
   .nav-item {
-    transform: translate3d(600px, 0, 0);
+    transform: translate3d(500px, 0, 0);
     @include easeOut;
 
     &.show {
       //slide in from right
-      transition-duration: 700ms;
+      transition-duration: 600ms;
       transform: translate3d(0, 0, 0);
     }
 
@@ -127,11 +145,14 @@
 
     &:hover {
       color: $secondary-color;
+      transition: all 0.4s ease-out;
+      transform: scale(1.05);
     }
   }
 }
 
 // delay each nav item slide by 0.1 seconds
+//this will loop thru the 'array'
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;

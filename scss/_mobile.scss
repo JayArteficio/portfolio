@@ -1,23 +1,32 @@
 // widescreens
 @include mediaXl {
   .projects {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #home .lg-heading {
+    margin-top: 25vh;
   }
 }
 
 // Desktops
 @include mediaLg {
   .projects {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sm-heading {
+    max-width: 500px;
   }
 }
 
 // Tablets
 @include mediaMd {
-  main {
-    align-items: center;
-    text-align: center;
+  .sm-heading {
+    max-width: 50px;
+  }
 
+  main {
+    // align-items: center;
+    // text-align: center;
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
@@ -36,16 +45,18 @@
   }
 
   .menu-nav {
-    height: 75vh;
+    height: 65vh;
     font-size: 24px;
     transform: translate3d(-100%, 0, 0);
   }
   .menu-branding {
-    height: 25vh;
+    height: 35vh;
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      background: url("../img/portrait_small.jpg");
+      background: url("../img/portrait.jpg");
+      background-position-x: -30px;
+      background-position-y: -12px;
       width: 150px;
       height: 150px;
     }
@@ -63,7 +74,14 @@
   }
 
   .projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+//SmallMedium for my Last name
+@include mediaSmMd {
+  .sm-heading {
+    min-width: 465px;
   }
 }
 
@@ -71,8 +89,18 @@
 @include mediaSm {
   main#home h1 {
     margin-top: 10vh;
+    font-size: 4rem;
+    font-weight: 400;
+  }
+  main#home h2 {
+    font-size: 1.3rem;
   }
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .sm-heading {
+    max-width: 311px;
+    min-width: 310px;
   }
 }
