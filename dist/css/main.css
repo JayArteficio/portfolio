@@ -267,7 +267,7 @@ main {
 #work .lg-heading {
   font-size: 3rem;
   margin-top: 5vh;
-  font-weight: 200; }
+  font-weight: 100; }
 
 #work .sm-heading {
   font-size: 1.3rem;
@@ -278,7 +278,7 @@ main {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
-  font-weight: 400; }
+  font-weight: 100; }
   .projects img {
     width: 100%;
     border: 3px white solid;
