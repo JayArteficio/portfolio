@@ -114,11 +114,13 @@ main {
 #about .lg-heading {
   font-size: 3rem;
   margin-top: 5vh;
+  font-weight: 100;
 }
 
 #about .sm-heading {
   font-size: 1.3rem;
   margin-bottom: 0.7rem;
+  font-weight: 100;
 }
 
 .about-info {
@@ -141,6 +143,8 @@ main {
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
+    font-weight: 100;
+    padding-top: 25px;
   }
 
   .job-1 {
@@ -162,6 +166,25 @@ main {
   }
   #company {
     color: $secondary-color;
+    font-weight: 100;
+  }
+
+  #role {
+    font-weight: 100;
+    margin-top: 0;
+  }
+  #dates {
+    font-size: .9rem;
+    font-weight: 100;
+  }
+
+  #job-description {
+    font-size: .9rem;
+    font-weight: 100;
+  }
+  li {
+    font-size: .9rem;
+    font-weight: 100;
   }
 }
 
