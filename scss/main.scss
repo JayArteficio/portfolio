@@ -33,7 +33,7 @@ h3 {
     margin-bottom: 2rem;
     border-radius: 3px;
     padding: 0.2rem 1rem;
-    max-width: 664px;
+    max-width: 684px;
     background: rgba(lighten($primary-color, 1), 0.5);
   }
 }
@@ -111,6 +111,8 @@ main {
   }
 }
 
+
+
 #about .lg-heading {
   font-size: 3rem;
   margin-top: 5vh;
@@ -174,16 +176,16 @@ main {
     margin-top: 0;
   }
   #dates {
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 100;
   }
 
   #job-description {
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 100;
   }
   li {
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 100;
   }
 }

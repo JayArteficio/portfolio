@@ -16,10 +16,9 @@ $background-opacity: 0.4;
       background-size: cover;
 
       // background: linear-gradient(45deg, red, blue);
-                   
 
       .overlay {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
@@ -43,7 +42,7 @@ $background-opacity: 0.4;
 
 //  Media Query Mixins
 @mixin mediaSm {
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 415px) {
     @content;
   }
 }
