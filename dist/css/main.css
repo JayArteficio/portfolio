@@ -29,13 +29,13 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: .95;
+  opacity: 0.95;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
   .menu-branding, .menu-nav {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     float: left;

@@ -44,13 +44,13 @@
   }
 }
 
-// Menu Overlay 
+// Menu Overlay
 
 .menu {
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: .95;
+  opacity: 0.95;
   visibility: hidden;
 
   &.show {
@@ -60,7 +60,7 @@
   &-branding,
   &-nav {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     float: left;
@@ -69,7 +69,7 @@
     overflow: hidden;
   }
 
-// right side with links 
+  // right side with links
   &-nav {
     margin: 0;
     padding: 0;
@@ -85,13 +85,12 @@
     }
   }
 
-  // branding side ie portrait or left side 
+  // branding side ie portrait or left side
   &-branding {
     // background: $primary-color;
     background: darken($primary-color, 20);
     transform: translate3d(0, 100%, 0);
     @include easeOut;
-    
 
     &.show {
       //slide in from bottom
@@ -113,7 +112,6 @@
       background-position: -14px, 50px;
       background-size: 110%;
       // z-index: 10;
-  
     }
   }
 
